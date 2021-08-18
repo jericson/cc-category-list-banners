@@ -1,0 +1,51 @@
+@mixin banner {
+  display: block;
+  position: relative;
+  min-height: 150px;
+  margin-top: 50px;
+  border: none;
+}
+@mixin banner-heading {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  font-family: var(--heading-font-family);
+  font-size: var(--font-up-6);
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+.category-list {
+  display: flex;
+  flex-direction: column;
+  thead {
+    display: none;
+  }
+  tbody {
+    border-top: none;
+    .category-list-banner:nth-child(1) {
+      @include banner;
+      margin-top: 30px;
+      background-image: url(https://forum.cfx.re/uploads/default/original/4X/9/e/0/9e0ae8653436dbbdecdb0d3cce71966efc423560.png);
+      background-repeat: repeat-x;
+      &:after {
+        @include banner-heading;
+        content: "Cfx.re";
+      }
+    }
+    .category-list-banner:nth-child(7) {
+      @include banner;
+      background-image: url(https://forum.cfx.re/uploads/default/original/4X/c/4/0/c40200d13a3e3f6fec42cfa585ae7ad4ac8d38c4.jpeg);
+      &:after {
+        @include banner-heading;
+        content: "FiveM";
+      }
+    }
+    tr {
+      display: flex;
+      border: 1px solid var(--primary-low);
+      border-top: none;
+      margin-bottom: 0;
+    }
+  }
+}
