@@ -26,19 +26,18 @@
     .category-list-banner:nth-child(1) {
       @include banner;
       margin-top: 30px;
-      background-image: url(https://forum.cfx.re/uploads/default/original/4X/9/e/0/9e0ae8653436dbbdecdb0d3cce71966efc423560.png);
-      background-repeat: repeat-x;
+      background: rosybrown;
       &:after {
         @include banner-heading;
-        content: "Cfx.re";
+        content: "Banner heading";
       }
     }
     .category-list-banner:nth-child(7) {
       @include banner;
-      background-image: url(https://forum.cfx.re/uploads/default/original/4X/c/4/0/c40200d13a3e3f6fec42cfa585ae7ad4ac8d38c4.jpeg);
+      background:thistle;
       &:after {
         @include banner-heading;
-        content: "FiveM";
+        content: "Banner heading";
       }
     }
     tr {
