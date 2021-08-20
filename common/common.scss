@@ -1,3 +1,11 @@
+@import "str-to-list";
+
+$list: str-to-list("#{$category_list_banners}", "|");
+$nested-list: ();
+@each $item in $list {
+  $item: str-to-list("#{$item}", ";");
+  $nested-list: append($nested-list, $item);
+}
 @mixin banner {
   display: block;
   position: relative;
@@ -18,13 +26,13 @@
 .category-list {
   display: flex;
   flex-direction: column;
-  thead {
-    display: none;
+  &.with-topics {
+    margin-left: 0px;
   }
-  tbody {
-    border-top: none;
-    .category-list-banner:nth-child(1) {
+  @each $id, $color, $heading in $nested-list {
+    .category-list-banner.category-#{$id} {
       @include banner;
+<<<<<<< Updated upstream
       margin-top: 30px;
       background: rosybrown;
       &:after {
@@ -46,5 +54,16 @@
       border-top: none;
       margin-bottom: 0;
     }
+=======
+      background-color: #{$color};
+      &:after {
+        @include banner-heading;
+        content: $heading;
+      }
+    }
+  }
+  .category-list-banner:first-child {
+    margin-top: 25px;
+>>>>>>> Stashed changes
   }
 }

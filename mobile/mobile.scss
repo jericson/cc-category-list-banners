@@ -1,0 +1,56 @@
+.category-list.with-topics {
+  .category-list-item {
+    position: relative;
+    border: none !important;
+    margin: 0;
+    padding: 0;
+
+    tbody {
+      border: 1px solid var(--primary-low);
+      border-top: none;
+    }
+    tr {
+      border: none;
+      margin-bottom: 0;
+      padding: 0 0.5em;
+      &:first-of-type {
+        th.main-link {
+          padding: 1em 0.5em 0.8em 0.5em;
+        }
+      }
+      &.category-description {
+        display: flex;
+        font-size: var(--font-up-1);
+        margin-top: 0;
+        td {
+          padding-right: 1.8em;
+          max-width: 400px;
+        }
+      }
+      &.category-topic-link {
+        display: flex;
+        justify-content: space-between;
+        &:last-of-type {
+          padding-bottom: 1em;
+        }
+        td.main-link {
+          font-size: var(--font-up-1);
+          padding-left: 1em;
+        }
+        a.title {
+          color: var(--tertiary);
+        }
+      }
+    }
+    footer {
+      border: none;
+      padding: 0;
+      .category-stat {
+        position: absolute;
+        top: 1.5em;
+        right: 0px;
+        display: block;
+      }
+    }
+  }
+}

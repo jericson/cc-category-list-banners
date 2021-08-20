@@ -1,0 +1,18 @@
+.category-list {
+  thead {
+    display: none;
+  }
+  td.category {
+    border-left: none!important;
+  }
+  tbody {
+    border-top: none;
+    tr {
+      display: flex;
+      border: 1px solid var(--primary-low);
+      border-top: none;
+      margin-bottom: 0;
+    }
+  }
+}
+
