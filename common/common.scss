@@ -32,29 +32,6 @@ $nested-list: ();
   @each $id, $color, $heading in $nested-list {
     .category-list-banner.category-#{$id} {
       @include banner;
-<<<<<<< Updated upstream
-      margin-top: 30px;
-      background: rosybrown;
-      &:after {
-        @include banner-heading;
-        content: "Banner heading";
-      }
-    }
-    .category-list-banner:nth-child(7) {
-      @include banner;
-      background:thistle;
-      &:after {
-        @include banner-heading;
-        content: "Banner heading";
-      }
-    }
-    tr {
-      display: flex;
-      border: 1px solid var(--primary-low);
-      border-top: none;
-      margin-bottom: 0;
-    }
-=======
       background-color: #{$color};
       &:after {
         @include banner-heading;
@@ -64,6 +41,5 @@ $nested-list: ();
   }
   .category-list-banner:first-child {
     margin-top: 25px;
->>>>>>> Stashed changes
   }
 }
