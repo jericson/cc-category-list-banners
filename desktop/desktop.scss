@@ -15,6 +15,15 @@
     }
   }
 }
+.category-list:not(.with-topics){
+  tbody tr {
+    justify-content: space-between;
+    td.topics {
+      align-self: center;
+      text-align: center;
+    }
+  }
+}
 @if $hide_category_color == "true" {
   .category-list {
     td.category {
@@ -28,3 +37,4 @@
     }
   }
 }
+
