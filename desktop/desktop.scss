@@ -1,6 +1,6 @@
 @import "variables";
 
-.category-list  {
+.category-list {
   thead {
     display: none;
   }
@@ -15,7 +15,7 @@
     }
   }
 }
-.category-list:not(.with-topics){
+.category-list:not(.with-topics) {
   tbody tr {
     justify-content: space-between;
     td.topics {
@@ -32,9 +32,8 @@
     tbody {
       tr {
         border-left: $border;
-        padding: .3rem;
+        padding: 0.3rem;
       }
     }
   }
 }
-

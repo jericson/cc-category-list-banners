@@ -22,10 +22,10 @@ $nested-list: ();
         content: $heading;
       }
     }
-    tbody tr[data-category-id="#{$id}"] {
+    tbody tr[data-category-id='#{$id}'] {
       border-top: $border;
     }
-    .category-list-item[data-category-id="#{$id}"] tbody{
+    .category-list-item[data-category-id='#{$id}'] tbody {
       border-top: $border !important;
     }
   }
