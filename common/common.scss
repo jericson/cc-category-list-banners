@@ -9,14 +9,14 @@ $nested-list: ();
 @mixin banner {
   display: block;
   position: relative;
-  min-height: 150px;
-  margin-top: 50px;
+  min-height: 350px;
+  margin-top: 0px;
   border: none;
 }
 @mixin banner-heading {
   position: absolute;
-  bottom: 10px;
-  left: 20px;
+  top: 25%;
+  left: 40%;
   font-family: var(--heading-font-family);
   font-size: var(--font-up-6);
   font-weight: 600;
@@ -33,10 +33,10 @@ $nested-list: ();
     .category-list-banner.category-#{$id} {
       @include banner;
       background-color: #{$color};
-      &:after {
+    /*  &:after {
         @include banner-heading;
         content: $heading;
-      }
+      }*/
     }
   }
   .category-list-banner:first-child {

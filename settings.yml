@@ -2,4 +2,19 @@ category_list_banners:
   type: list
   default: "1;#9A56A2;Heading 1|4;#3271B4;Heading 2"
   description:
-    en: 'Semicolon delimited in this order: Tag name;Color;Description<br>The description will only be shown on tag banners'
+    en: "Semicolon delimited in this order: Tag name;Color;Description<br>The description will only be shown on tag banners"
+hide_category_color:
+  type: bool
+  default: false
+  description:
+    en: "Hide the colored border on category list items"
+card_layout:
+  type: bool
+  default: false
+  description:
+    en: "Style grouped categories as card panels"
+last_categories_on_cards:
+  type: string
+  default: "3;9"
+  description:
+    en: "Last categories on card panels"
