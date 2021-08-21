@@ -1,4 +1,6 @@
-.category-list {
+@import "variables";
+
+.category-list  {
   thead {
     display: none;
   }
@@ -6,46 +8,22 @@
     border-top: none;
     tr {
       display: flex;
-      border: 1px solid var(--primary-low);
+      border: $border;
       border-left: none;
       border-top: none;
-      border-bottom: none;
       margin-bottom: 0;
-      td.category {
-        border-left-width: 150px;
-      }
     }
   }
 }
 @if $hide_category_color == "true" {
   .category-list {
-    .category-list-banner {
-      border-bottom: none !important;
-    }
     td.category {
       border-left: none !important;
     }
     tbody {
       tr {
-        border-left: 1px solid var(--primary-low);
-      }
-    }
-  }
-}
-@if $card_layout == "true" {
-  .category-list {
-    .category-list-banner {
-      border-top-left-radius: 15px;
-      border-top-right-radius: 15px;
-      box-shadow: 0 -20px 40px 0 rgba(107, 108, 240, 0.1);
-    }  
-
-    $last-categories: str-to-list($last_categories_on_cards, ";");
-    @each $id in $last-categories {
-      tbody tr[data-category-id='#{$id}'] {
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-        box-shadow: 0 20px 40px 0 rgba(107, 108, 240, 0.1);
+        border-left: $border;
+        padding: .3rem;
       }
     }
   }

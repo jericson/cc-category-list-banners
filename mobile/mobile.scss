@@ -1,12 +1,19 @@
-.category-list.with-topics {
+@import "variables";
+
+.category-list {
+  .category-list-banner:after {
+    left: 1.6rem;
+    bottom: 1rem;
+  }
   .category-list-item {
     position: relative;
-    border: none !important;
+    border-bottom: none !important;
+    border-top: none !important;
     margin: 0;
     padding: 0;
 
     tbody {
-      border: 1px solid var(--primary-low);
+      border: $border;
       border-top: none;
     }
     tr {
@@ -51,6 +58,16 @@
         right: 0px;
         display: block;
       }
+    }
+  }
+}
+@if $hide_category_color == "true" {
+  .category-list {
+    .category-list-banner:after {
+      left: 1.2rem;
+    }
+    .category-list-item {
+      border: none !important;
     }
   }
 }

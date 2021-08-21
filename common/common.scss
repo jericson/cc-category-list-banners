@@ -1,4 +1,4 @@
-@import "str-to-list";
+@import "str-to-list", "variables";
 
 $list: str-to-list("#{$category_list_banners}", "|");
 $nested-list: ();
@@ -6,40 +6,31 @@ $nested-list: ();
   $item: str-to-list("#{$item}", ";");
   $nested-list: append($nested-list, $item);
 }
-@mixin banner {
-  display: block;
-  position: relative;
-  min-height: 350px;
-  margin-top: 0px;
-  border: none;
-}
-@mixin banner-heading {
-  position: absolute;
-  top: 25%;
-  left: 40%;
-  font-family: var(--heading-font-family);
-  font-size: var(--font-up-6);
-  font-weight: 600;
-  color: var(--secondary);
-}
-
 .category-list {
   display: flex;
   flex-direction: column;
   &.with-topics {
-    margin-left: 0px;
+    margin-left: 0;
   }
+
   @each $id, $color, $heading in $nested-list {
     .category-list-banner.category-#{$id} {
       @include banner;
       background-color: #{$color};
-    /*  &:after {
+      &:after {
         @include banner-heading;
         content: $heading;
-      }*/
+      }
+    }
+    tbody tr[data-category-id="#{$id}"] {
+      border-top: $border;
+    }
+    .category-list-item[data-category-id="#{$id}"] tbody{
+      border-top: $border !important;
     }
   }
+
   .category-list-banner:first-child {
-    margin-top: 25px;
+    margin-top: 1.5rem;
   }
 }
