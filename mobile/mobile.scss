@@ -47,6 +47,9 @@
         a.title {
           color: var(--tertiary);
         }
+        & .posts {
+          width: unset;
+        }
       }
     }
     footer {
@@ -57,6 +60,9 @@
         top: 1.5em;
         right: 0px;
         display: block;
+        &:not(:first-of-type) {
+          display: none;
+        }
       }
     }
   }
