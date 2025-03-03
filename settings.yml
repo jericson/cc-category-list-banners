@@ -1,6 +1,6 @@
 category_list_banners:
   type: list
-  default: "1;none;Heading 1|4;#E9E9E9;Heading 2"
+  default: "789;none;College Confidential|63;none;Getting to College|634;none;Applying to College|645;none;College and Beyond|631;none;Find Your People"
   description:
     en: "Semicolon delimited in this order:</br> Category ID;Banner color;Heading<br>
     <b>Category ID: </b>The ID of the category below the banner. For example 2 in /c/feedback/2</br>
