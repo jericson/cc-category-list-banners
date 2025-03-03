@@ -10,3 +10,8 @@ hide_category_color:
   default: false
   description:
     en: "Hide the colored border on category list items"
+hide_categories:
+  type: list
+  default: 77
+  description:
+    en: "List of categories to hide"
