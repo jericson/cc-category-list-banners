@@ -5,7 +5,7 @@ $border: 1px solid var(--primary-low);
   justify-content: center;
   align-items: center;
   min-height: 1rem;
-  margin-top: 1rem;
+  margin-top: 0rem;
 }
 @mixin banner-heading {
   font-family: var(--heading-font-family);
