@@ -2,10 +2,10 @@ $border: 1px solid var(--primary-low);
 
 @mixin banner {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 1rem;
-  margin-top: 0rem;
+  justify-content: left;
+  align-items: left;
+  min-height: 1.5rem;
+  margin-top: 1rem;
 }
 @mixin banner-heading {
   font-family: var(--heading-font-family);
