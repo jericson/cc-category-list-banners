@@ -7,11 +7,6 @@ $nested-list: ();
   $nested-list: append($nested-list, $item);
 }
 .category-list {
-  display: flex;
-  flex-direction: column;
-  &.with-topics {
-    margin-left: 0;
-  }
 
   @each $id, $color, $heading in $nested-list {
     .category-list-banner.category-#{$id} {
